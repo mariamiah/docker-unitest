@@ -1,0 +1,12 @@
+schemaVersion: '2.0.0'
+fileExistenceTests:
+  - name: 'Check the cache folder'
+    path: '/app/api'
+    shouldExist: true
+    uid: 0
+    gid: 0
+    isExecutableBy: 'group'
+fileContentTests:
+  - name: 'Cache folder config'
+    path: '/app/requirements.txt'
+    expectedContents: ['Flask==1.1.2']
